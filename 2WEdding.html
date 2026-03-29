@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rahul & Harsha — Wedding 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --maroon: #6B0F1A;
+    --maroon-deep: #4A0A12;
+    --maroon-light: #8B1A28;
+    --gold: #C9963A;
+    --gold-light: #E8B84B;
+    --gold-pale: #F5DFA0;
+    --gold-cream: #FDF6E3;
+    --ivory: #FDF8F0;
+    --cream: #F9EFD7;
+    --dark: #1A0A05;
+    --text: #3D1515;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--ivory);
+    color: var(--text);
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* ─── SCROLLBAR ─── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--cream); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(107,15,26,0.97);
+    backdrop-filter: blur(10px);
+    padding: 14px 20px;
+    display: flex; align-items: center; justify-content: center;
+    border-bottom: 1px solid rgba(201,150,58,0.4);
+  }
+  .nav-inner {
+    display: flex; gap: 0; overflow-x: auto; scrollbar-width: none;
+  }
+  .nav-inner::-webkit-scrollbar { display: none; }
+  nav a {
+    color: var(--gold-pale);
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    white-space: nowrap;
+    transition: color 0.3s;
+    border-right: 1px solid rgba(201,150,58,0.2);
+  }
+  nav a:last-child { border-right: none; }
+  nav a:hover { color: var(--gold-light); }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100svh;
+    background: linear-gradient(160deg, var(--maroon-deep) 0%, var(--maroon) 45%, #8B2030 70%, #5C0B16 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 90px 24px 60px;
+    position: relative; overflow: hidden; text-align: center;
+  }
+
+  /* Decorative SVG patterns */
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(201,150,58,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(201,150,58,0.06) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .hero-mandala-top {
+    position: absolute; top: -30px; left: 50%; transform: translateX(-50%);
+    width: 220px; opacity: 0.15;
+  }
+  .hero-mandala-bl {
+    position: absolute; bottom: -40px; left: -40px;
+    width: 180px; opacity: 0.12; transform: rotate(45deg);
+  }
+  .hero-mandala-tr {
+    position: absolute; top: 60px; right: -30px;
+    width: 150px; opacity: 0.12; transform: rotate(-30deg);
+  }
+
+  .hero-tag {
+    font-family: 'Cinzel', serif;
+    font-size: 9px; letter-spacing: 4px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    animation: fadeUp 1s ease both;
+  }
+
+  .hero-bismillah {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 13px;
+    color: rgba(245,223,160,0.7);
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    max-width: 300px;
+    animation: fadeUp 1s 0.2s ease both;
+  }
+
+  /* 3D Couple graphic */
+  .couple-graphic {
+    width: 240px; height: 240px;
+    margin: 0 auto 30px;
+    position: relative;
+    animation: fadeUp 1s 0.1s ease both;
+  }
+
+  .couple-svg-wrap {
+    width: 100%; height: 100%;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+  }
+
+  .hero-names {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(42px, 13vw, 58px);
+    color: var(--gold-pale);
+    letter-spacing: 2px;
+    line-height: 1.1;
+    animation: fadeUp 1s 0.3s ease both;
+  }
+  .hero-names .amp {
+    font-size: 0.65em;
+    color: var(--gold);
+    font-style: italic;
+    display: block;
+    line-height: 1.4;
+  }
+
+  .hero-divider {
+    width: 120px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 24px auto;
+    animation: fadeUp 1s 0.4s ease both;
+  }
+  .hero-divider-dot {
+    width: 6px; height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    margin: -11px auto 0;
+    box-shadow: 0 0 8px var(--gold);
+  }
+
+  .hero-date-block {
+    animation: fadeUp 1s 0.5s ease both;
+  }
+  .hero-date {
+    font-family: 'Cinzel', serif;
+    font-size: 13px; letter-spacing: 4px;
+    color: var(--gold-light);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .hero-venue {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 15px;
+    color: rgba(245,223,160,0.75);
+    letter-spacing: 1px;
+  }
+
+  .hero-cta {
+    margin-top: 36px;
+    display: inline-block;
+    padding: 13px 32px;
+    border: 1px solid var(--gold);
+    color: var(--gold-pale);
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 10px; letter-spacing: 3px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: all 0.3s;
+    animation: fadeUp 1s 0.6s ease both;
+    background: rgba(201,150,58,0.08);
+  }
+  .hero-cta:hover {
+    background: rgba(201,150,58,0.2);
+    box-shadow: 0 0 20px rgba(201,150,58,0.3);
+  }
+
+  /* ─── SECTIONS ─── */
+  section {
+    padding: 70px 24px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: 'Cinzel', serif;
+    font-size: 8px; letter-spacing: 4px;
+    color: var(--gold);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: clamp(28px, 8vw, 36px);
+    color: var(--maroon);
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .section-rule {
+    display: flex; align-items: center; gap: 12px;
+    margin: 16px auto 30px;
+    max-width: 200px;
+  }
+  .section-rule span {
+    flex: 1; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold));
+  }
+  .section-rule span:last-child {
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+  .section-rule svg { flex-shrink: 0; }
+
+  /* ─── WELCOME BAND ─── */
+  .welcome-band {
+    background: linear-gradient(135deg, var(--maroon-deep), var(--maroon));
+    padding: 50px 24px;
+    text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .welcome-band::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9963A' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .welcome-band p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--gold-pale);
+    line-height: 1.8;
+    max-width: 340px;
+    margin: 0 auto 20px;
+  }
+  .welcome-band .families {
+    font-family: 'Cinzel', serif;
+    font-size: 10px; letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-top: 16px;
+  }
+  .welcome-band .amp-small {
+    color: rgba(245,223,160,0.5);
+    display: block; margin: 4px 0;
+  }
+
+  /* ─── MAIN EVENT ─── */
+  .main-event-section { background: var(--ivory); }
+
+  .event-card-main {
+    background: linear-gradient(145deg, #fff8ee, #fdf0d5);
+    border: 1px solid rgba(201,150,58,0.3);
+    border-radius: 4px;
+    padding: 36px 28px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(107,15,26,0.1);
+    overflow: hidden;
+  }
+  .event-card-main::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--maroon), var(--gold), var(--maroon));
+  }
+  .event-card-main::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--maroon), var(--gold), var(--maroon));
+  }
+  .event-date-badge {
+    display: inline-block;
+    background: var(--maroon);
+    color: var(--gold-pale);
+    font-family: 'Cinzel', serif;
+    font-size: 10px; letter-spacing: 3px;
+    padding: 6px 18px;
+    border-radius: 2px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+  }
+  .event-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--maroon);
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+  .event-details { list-style: none; }
+  .event-details li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 12px;
+    text-align: left;
+    line-height: 1.5;
+  }
+  .event-details li .icon {
+    color: var(--gold);
+    flex-shrink: 0;
+    margin-top: 2px;
+    font-size: 14px;
+  }
+
+  /* ─── ITINERARY ─── */
+  .itinerary-section { background: var(--cream); }
+
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before {
+    content: '';
+    position: absolute; left: 8px; top: 8px; bottom: 8px; width: 1px;
+    background: linear-gradient(180deg, var(--gold), transparent);
+  }
+
+  .timeline-item {
+    position: relative; margin-bottom: 32px;
+    animation: slideIn 0.6s ease both;
+  }
+  .timeline-dot {
+    position: absolute; left: -24px; top: 4px;
+    width: 10px; height: 10px;
+    background: var(--gold);
+    border-radius: 50%;
+    border: 2px solid var(--cream);
+    box-shadow: 0 0 0 3px rgba(201,150,58,0.3);
+  }
+  .timeline-date {
+    font-family: 'Cinzel', serif;
+    font-size: 9px; letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .timeline-event-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--maroon);
+    margin-bottom: 4px;
+  }
+  .timeline-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: #7A4040;
+    line-height: 1.6;
+  }
+  .timeline-sub { margin-top: 10px; }
+  .timeline-sub-item {
+    display: flex; align-items: flex-start; gap: 8px;
+    margin-bottom: 8px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.7);
+    border-left: 2px solid var(--gold);
+    border-radius: 0 4px 4px 0;
+  }
+  .timeline-sub-item .sub-time {
+    font-family: 'Cinzel', serif;
+    font-size: 9px; letter-spacing: 1px;
+    color: var(--gold);
+    white-space: nowrap;
+    margin-top: 1px;
+  }
+  .timeline-sub-item .sub-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.4;
+  }
+
+  /* ─── VENUE ─── */
+  .venue-section { background: var(--ivory); }
+
+  .venue-card {
+    background: #fff;
+    border: 1px solid rgba(201,150,58,0.25);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(107,15,26,0.08);
+  }
+  .venue-map-placeholder {
+    width: 100%; height: 200px;
+    background: linear-gradient(135deg, #f0e6d3, #e8d5b5);
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .venue-map-placeholder::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C9963A' fill-opacity='0.08'%3E%3Cpath d='M0 0h20v20H0V0zm20 20h20v20H20V20z'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  .map-pin-icon {
+    font-size: 48px;
+    opacity: 0.4;
+    filter: drop-shadow(0 2px 8px rgba(107,15,26,0.3));
+  }
+  .venue-info { padding: 24px; }
+  .venue-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--maroon);
+    margin-bottom: 8px;
+  }
+  .venue-address {
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    color: #7A5050;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  .maps-btn {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%;
+    padding: 13px;
+    background: var(--maroon);
+    color: var(--gold-pale);
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 10px; letter-spacing: 3px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+  .maps-btn:hover { background: var(--maroon-light); }
+
+  /* ─── TRAVEL ─── */
+  .travel-section {
+    background: linear-gradient(135deg, var(--maroon-deep), #5C0B16);
+  }
+  .travel-section .section-title { color: var(--gold-pale); }
+  .travel-section .section-label { color: var(--gold); }
+
+  .travel-grid { display: flex; flex-direction: column; gap: 16px; margin-top: 10px; }
+
+  .travel-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(201,150,58,0.25);
+    border-radius: 4px;
+    padding: 20px;
+    backdrop-filter: blur(4px);
+  }
+  .travel-card-icon {
+    font-size: 28px; margin-bottom: 10px;
+  }
+  .travel-card-title {
+    font-family: 'Cinzel', serif;
+    font-size: 11px; letter-spacing: 2px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .travel-card-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: rgba(245,223,160,0.8);
+    line-height: 1.6;
+  }
+
+  /* ─── FAMILIES ─── */
+  .families-section {
+    background: var(--cream);
+    text-align: center;
+  }
+  .families-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #7A4040;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .families-names {
+    display: flex; flex-direction: column; align-items: center; gap: 0;
+  }
+  .family-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--maroon);
+  }
+  .families-amp {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 32px;
+    color: var(--gold);
+    line-height: 1.2;
+  }
+  .families-tagline {
+    margin-top: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: #9A6060;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--dark);
+    padding: 40px 24px;
+    text-align: center;
+  }
+  footer .footer-names {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: var(--gold-pale);
+    margin-bottom: 8px;
+  }
+  footer .footer-date {
+    font-family: 'Cinzel', serif;
+    font-size: 9px; letter-spacing: 4px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  footer .footer-msg {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: rgba(245,223,160,0.5);
+    line-height: 1.7;
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(-16px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes float {
+    0%,100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px); }
+  }
+  @keyframes glow {
+    0%,100% { filter: drop-shadow(0 0 8px rgba(201,150,58,0.4)); }
+    50%      { filter: drop-shadow(0 0 20px rgba(201,150,58,0.8)); }
+  }
+  @keyframes rotate-slow {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+  .float-anim { animation: float 4s ease-in-out infinite; }
+  .glow-anim  { animation: glow  3s ease-in-out infinite; }
+
+  /* scroll fade */
+  .fade-in {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-in.visible {
+    opacity: 1; transform: translateY(0);
+  }
+
+  /* ─── ORNAMENT SVGs inline ─── */
+  .ornament { display: block; margin: 0 auto; }
+
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <div class="nav-inner">
+    <a href="#hero">Home</a>
+    <a href="#main-event">Ceremony</a>
+    <a href="#itinerary">Itinerary</a>
+    <a href="#venue">Venue</a>
+    <a href="#travel">Travel</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="hero">
+
+  <!-- Top mandala ornament -->
+  <svg class="hero-mandala-top" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="100" r="90" stroke="#C9963A" stroke-width="0.5" stroke-dasharray="4 4"/>
+    <circle cx="100" cy="100" r="70" stroke="#C9963A" stroke-width="0.5"/>
+    <circle cx="100" cy="100" r="50" stroke="#C9963A" stroke-width="1"/>
+    <circle cx="100" cy="100" r="8" fill="#C9963A" opacity="0.6"/>
+    <g opacity="0.8">
+      <ellipse cx="100" cy="30" rx="6" ry="16" fill="#C9963A" opacity="0.5"/>
+      <ellipse cx="100" cy="170" rx="6" ry="16" fill="#C9963A" opacity="0.5"/>
+      <ellipse cx="30" cy="100" rx="16" ry="6" fill="#C9963A" opacity="0.5"/>
+      <ellipse cx="170" cy="100" rx="16" ry="6" fill="#C9963A" opacity="0.5"/>
+      <ellipse cx="50" cy="50" rx="6" ry="16" fill="#C9963A" opacity="0.3" transform="rotate(-45 50 50)"/>
+      <ellipse cx="150" cy="50" rx="6" ry="16" fill="#C9963A" opacity="0.3" transform="rotate(45 150 50)"/>
+      <ellipse cx="50" cy="150" rx="6" ry="16" fill="#C9963A" opacity="0.3" transform="rotate(45 50 150)"/>
+      <ellipse cx="150" cy="150" rx="6" ry="16" fill="#C9963A" opacity="0.3" transform="rotate(-45 150 150)"/>
+    </g>
+    <polygon points="100,20 106,90 100,100 94,90" fill="#C9963A" opacity="0.2"/>
+    <polygon points="100,180 106,110 100,100 94,110" fill="#C9963A" opacity="0.2"/>
+    <polygon points="20,100 90,106 100,100 90,94" fill="#C9963A" opacity="0.2"/>
+    <polygon points="180,100 110,106 100,100 110,94" fill="#C9963A" opacity="0.2"/>
+  </svg>
+
+  <!-- Corner mandala BL -->
+  <svg class="hero-mandala-bl" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="80" cy="80" r="70" stroke="#C9963A" stroke-width="0.5" stroke-dasharray="3 5"/>
+    <circle cx="80" cy="80" r="50" stroke="#C9963A" stroke-width="0.5"/>
+    <circle cx="80" cy="80" r="6" fill="#C9963A" opacity="0.5"/>
+    <ellipse cx="80" cy="15" rx="5" ry="12" fill="#C9963A" opacity="0.4"/>
+    <ellipse cx="80" cy="145" rx="5" ry="12" fill="#C9963A" opacity="0.4"/>
+    <ellipse cx="15" cy="80" rx="12" ry="5" fill="#C9963A" opacity="0.4"/>
+    <ellipse cx="145" cy="80" rx="12" ry="5" fill="#C9963A" opacity="0.4"/>
+  </svg>
+
+  <!-- Corner mandala TR -->
+  <svg class="hero-mandala-tr" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="70" cy="70" r="60" stroke="#C9963A" stroke-width="0.5" stroke-dasharray="3 4"/>
+    <circle cx="70" cy="70" r="40" stroke="#C9963A" stroke-width="0.5"/>
+    <circle cx="70" cy="70" r="5" fill="#C9963A" opacity="0.5"/>
+    <ellipse cx="70" cy="12" rx="4" ry="10" fill="#C9963A" opacity="0.4"/>
+    <ellipse cx="70" cy="128" rx="4" ry="10" fill="#C9963A" opacity="0.4"/>
+    <ellipse cx="12" cy="70" rx="10" ry="4" fill="#C9963A" opacity="0.4"/>
+    <ellipse cx="128" cy="70" rx="10" ry="4" fill="#C9963A" opacity="0.4"/>
+  </svg>
+
+  <div class="hero-tag">♦ With love & blessings ♦</div>
+
+  <div class="hero-bismillah">
+    "A new journey begins with the love<br>and blessings of our family and friends."
+  </div>
+
+  <!-- 3D-style Couple SVG Illustration -->
+  <div class="couple-graphic float-anim">
+    <svg class="couple-svg-wrap glow-anim" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#E8B84B" stop-opacity="0.25"/>
+          <stop offset="100%" stop-color="#6B0F1A" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="skinF" cx="50%" cy="30%" r="60%">
+          <stop offset="0%" stop-color="#F5C8A0"/>
+          <stop offset="100%" stop-color="#D4956A"/>
+        </radialGradient>
+        <radialGradient id="skinM" cx="50%" cy="30%" r="60%">
+          <stop offset="0%" stop-color="#E8B080"/>
+          <stop offset="100%" stop-color="#C07840"/>
+        </radialGradient>
+        <radialGradient id="saree" cx="30%" cy="20%" r="80%">
+          <stop offset="0%" stop-color="#C9963A"/>
+          <stop offset="50%" stop-color="#8B1A28"/>
+          <stop offset="100%" stop-color="#4A0A12"/>
+        </radialGradient>
+        <radialGradient id="sherwani" cx="70%" cy="20%" r="80%">
+          <stop offset="0%" stop-color="#7A1020"/>
+          <stop offset="50%" stop-color="#4A0A12"/>
+          <stop offset="100%" stop-color="#2A0508"/>
+        </radialGradient>
+        <linearGradient id="gold-acc" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#F5DFA0"/>
+          <stop offset="50%" stop-color="#C9963A"/>
+          <stop offset="100%" stop-color="#A07820"/>
+        </linearGradient>
+        <filter id="shadow3d">
+          <feDropShadow dx="3" dy="6" stdDeviation="4" flood-color="#3D0A10" flood-opacity="0.5"/>
+        </filter>
+        <filter id="softshadow">
+          <feDropShadow dx="1" dy="3" stdDeviation="3" flood-color="#3D0A10" flood-opacity="0.3"/>
+        </filter>
+      </defs>
+
+      <!-- Glow BG -->
+      <circle cx="120" cy="130" r="100" fill="url(#bgGlow)"/>
+
+      <!-- Decorative ring -->
+      <circle cx="120" cy="120" r="108" stroke="#C9963A" stroke-width="0.5" stroke-dasharray="4 6" opacity="0.4"/>
+      <circle cx="120" cy="120" r="100" stroke="#C9963A" stroke-width="0.3" opacity="0.3"/>
+
+      <!-- ── BRIDE (left) ── -->
+      <g filter="url(#shadow3d)">
+        <!-- Saree body -->
+        <ellipse cx="82" cy="170" rx="34" ry="55" fill="url(#saree)"/>
+        <!-- Saree drape accent -->
+        <path d="M60 145 Q50 155 55 175 Q60 185 75 188 Q65 175 68 160Z" fill="#C9963A" opacity="0.5"/>
+        <path d="M100 148 Q112 158 108 178 Q103 188 90 190 Q100 178 96 163Z" fill="rgba(245,223,160,0.15)"/>
+        <!-- Gold border saree -->
+        <path d="M50 175 Q52 195 82 200 Q112 195 114 175" stroke="url(#gold-acc)" stroke-width="2.5" fill="none" opacity="0.8"/>
+        <!-- Blouse -->
+        <ellipse cx="82" cy="132" rx="22" ry="18" fill="#8B1A28"/>
+        <path d="M60 128 Q82 122 104 128" stroke="url(#gold-acc)" stroke-width="1.5" fill="none"/>
+        <!-- Neck -->
+        <ellipse cx="82" cy="114" rx="8" ry="10" fill="url(#skinF)"/>
+        <!-- Head -->
+        <ellipse cx="82" cy="95" rx="20" ry="22" fill="url(#skinF)"/>
+        <!-- Hair -->
+        <path d="M62 88 Q64 65 82 62 Q100 65 102 88 Q95 75 82 74 Q69 75 62 88Z" fill="#1A0808"/>
+        <!-- Dupatta/veil on head -->
+        <path d="M63 82 Q62 65 82 60 Q102 65 101 82 Q95 70 82 68 Q69 70 63 82Z" fill="#8B1A28" opacity="0.7"/>
+        <path d="M63 82 Q62 65 82 60 Q102 65 101 82" stroke="url(#gold-acc)" stroke-width="1" fill="none"/>
+        <!-- Face features -->
+        <ellipse cx="76" cy="94" rx="3" ry="3.5" fill="#5A2A10" opacity="0.8"/><!-- left eye -->
+        <ellipse cx="88" cy="94" rx="3" ry="3.5" fill="#5A2A10" opacity="0.8"/><!-- right eye -->
+        <circle cx="76" cy="93" r="1.5" fill="#fff" opacity="0.7"/>
+        <circle cx="88" cy="93" r="1.5" fill="#fff" opacity="0.7"/>
+        <path d="M78 100 Q82 103 86 100" stroke="#C07878" stroke-width="1.5" fill="none" stroke-linecap="round"/><!-- smile -->
+        <circle cx="82" cy="97" r="1.5" fill="#D4956A"/><!-- nose -->
+        <!-- Bindi -->
+        <circle cx="82" cy="87" r="2" fill="#C9963A"/>
+        <!-- Earrings -->
+        <circle cx="62" cy="100" r="3" fill="url(#gold-acc)"/>
+        <line x1="62" y1="103" x2="62" y2="110" stroke="url(#gold-acc)" stroke-width="1"/>
+        <circle cx="62" cy="111" r="2" fill="url(#gold-acc)"/>
+        <!-- Bangles -->
+        <circle cx="60" cy="148" r="5" stroke="url(#gold-acc)" stroke-width="1.5" fill="none"/>
+        <circle cx="60" cy="148" r="4" stroke="#C9963A" stroke-width="0.5" fill="none"/>
+        <!-- Necklace -->
+        <path d="M70 120 Q82 126 94 120" stroke="url(#gold-acc)" stroke-width="2" fill="none"/>
+        <circle cx="82" cy="126" r="3" fill="url(#gold-acc)"/>
+        <!-- Arms -->
+        <path d="M60 130 Q48 148 55 165" stroke="url(#skinF)" stroke-width="10" stroke-linecap="round" fill="none"/>
+        <path d="M104 130 Q116 148 109 165" stroke="url(#skinF)" stroke-width="10" stroke-linecap="round" fill="none"/>
+      </g>
+
+      <!-- ── GROOM (right) ── -->
+      <g filter="url(#shadow3d)">
+        <!-- Sherwani body -->
+        <ellipse cx="158" cy="170" rx="32" ry="55" fill="url(#sherwani)"/>
+        <!-- Sherwani buttons/details -->
+        <line x1="158" y1="128" x2="158" y2="195" stroke="url(#gold-acc)" stroke-width="1.5" opacity="0.7"/>
+        <circle cx="158" cy="138" r="2" fill="url(#gold-acc)"/>
+        <circle cx="158" cy="150" r="2" fill="url(#gold-acc)"/>
+        <circle cx="158" cy="162" r="2" fill="url(#gold-acc)"/>
+        <!-- Sherwani collar -->
+        <path d="M140 128 Q158 122 176 128 Q168 132 158 130 Q148 132 140 128Z" fill="#6B0F1A"/>
+        <path d="M140 128 Q158 122 176 128" stroke="url(#gold-acc)" stroke-width="1.5" fill="none"/>
+        <!-- Neck -->
+        <ellipse cx="158" cy="114" rx="9" ry="10" fill="url(#skinM)"/>
+        <!-- Head -->
+        <ellipse cx="158" cy="94" rx="21" ry="22" fill="url(#skinM)"/>
+        <!-- Hair -->
+        <path d="M137 88 Q140 68 158 66 Q176 68 179 88 Q174 74 158 73 Q142 74 137 88Z" fill="#1A0808"/>
+        <!-- Safa/turban -->
+        <ellipse cx="158" cy="76" rx="24" ry="12" fill="#8B1A28"/>
+        <path d="M134 80 Q158 72 182 80" stroke="url(#gold-acc)" stroke-width="1.5" fill="none"/>
+        <path d="M134 76 Q158 68 182 76" stroke="url(#gold-acc)" stroke-width="1" fill="none" opacity="0.6"/>
+        <!-- Turban knot -->
+        <ellipse cx="158" cy="68" rx="6" ry="5" fill="#6B0F1A"/>
+        <circle cx="158" cy="68" r="3" fill="url(#gold-acc)"/>
+        <!-- Kalgi -->
+        <path d="M155 65 Q158 50 162 42 Q165 35 162 30" stroke="url(#gold-acc)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <ellipse cx="162" cy="30" rx="3" ry="5" fill="url(#gold-acc)"/>
+        <!-- Face features -->
+        <ellipse cx="151" cy="93" rx="3" ry="3.5" fill="#3A1A08" opacity="0.85"/>
+        <ellipse cx="165" cy="93" rx="3" ry="3.5" fill="#3A1A08" opacity="0.85"/>
+        <circle cx="151" cy="92" r="1.5" fill="#fff" opacity="0.7"/>
+        <circle cx="165" cy="92" r="1.5" fill="#fff" opacity="0.7"/>
+        <path d="M154 100 Q158 103 162 100" stroke="#A06848" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <circle cx="158" cy="97" r="1.5" fill="#C07840"/>
+        <!-- Ear -->
+        <circle cx="179" cy="100" r="3" fill="url(#skinM)"/>
+        <!-- Arms -->
+        <path d="M126 130 Q114 148 121 165" stroke="url(#skinM)" stroke-width="10" stroke-linecap="round" fill="none"/>
+        <path d="M190 130 Q202 148 195 165" stroke="url(#skinM)" stroke-width="10" stroke-linecap="round" fill="none"/>
+        <!-- Sherwani sleeve -->
+        <path d="M126 130 Q114 148 121 165" stroke="#4A0A12" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.6"/>
+        <path d="M190 130 Q202 148 195 165" stroke="#4A0A12" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.6"/>
+      </g>
+
+      <!-- Joined hands in centre -->
+      <g filter="url(#softshadow)">
+        <ellipse cx="120" cy="178" rx="16" ry="8" fill="url(#skinF)" opacity="0.9"/>
+        <path d="M108 175 Q114 172 120 174 Q126 172 132 175 Q126 180 120 180 Q114 180 108 175Z" fill="url(#skinM)" opacity="0.8"/>
+        <!-- Ring -->
+        <circle cx="123" cy="174" r="2.5" stroke="url(#gold-acc)" stroke-width="1" fill="none"/>
+        <circle cx="117" cy="175" r="2.5" stroke="url(#gold-acc)" stroke-width="1" fill="none"/>
+      </g>
+
+      <!-- Flower petals scattered -->
+      <g opacity="0.6">
+        <ellipse cx="40" cy="140" rx="4" ry="7" fill="#E8B84B" transform="rotate(-30 40 140)"/>
+        <ellipse cx="32" cy="155" rx="3" ry="6" fill="#C9963A" transform="rotate(20 32 155)"/>
+        <ellipse cx="200" cy="135" rx="4" ry="7" fill="#E8B84B" transform="rotate(30 200 135)"/>
+        <ellipse cx="208" cy="152" rx="3" ry="6" fill="#C9963A" transform="rotate(-20 208 152)"/>
+        <ellipse cx="120" cy="210" rx="3" ry="6" fill="#E8B84B" transform="rotate(15 120 210)"/>
+        <ellipse cx="108" cy="215" rx="3" ry="5" fill="#C9963A" transform="rotate(-25 108 215)"/>
+        <ellipse cx="132" cy="216" rx="3" ry="5" fill="#8B1A28" transform="rotate(40 132 216)"/>
+      </g>
+
+      <!-- Stars / sparkles -->
+      <g fill="#E8B84B" opacity="0.7">
+        <polygon points="36,60 37.5,64.5 42,64.5 38.5,67.5 40,72 36,69 32,72 33.5,67.5 30,64.5 34.5,64.5" transform="scale(0.5) translate(32,65)"/>
+        <polygon points="204,55 205,58 208,58 205.5,60 206.5,63 204,61.5 201.5,63 202.5,60 200,58 203,58" transform="scale(0.6) translate(130,30)"/>
+        <circle cx="50" cy="190" r="2"/>
+        <circle cx="190" cy="185" r="2"/>
+        <circle cx="120" cy="20" r="1.5"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="hero-names">
+    Rahul
+    <span class="amp">&amp;</span>
+    Harsha
+  </div>
+
+  <div class="hero-divider">
+    <div class="hero-divider-dot"></div>
+  </div>
+
+  <div class="hero-date-block">
+    <div class="hero-date">Tuesday, 5th May 2026</div>
+    <div class="hero-venue">Anand Marriage Garden, Indore</div>
+  </div>
+
+  <a href="#main-event" class="hero-cta">View Details ↓</a>
+</section>
+
+<!-- ══ WELCOME BAND ══ -->
+<div class="welcome-band fade-in">
+  <p>We are thrilled to invite you to the wedding celebration of <strong>Harsha and Rahul</strong>. This website contains all the details for our multi-day festivities. We can't wait to see you there!</p>
+  <div class="families">
+    <span>The Rathor Family</span>
+    <span class="amp-small">❧</span>
+    <span>The Sahu Family</span>
+  </div>
+  <p style="margin-top:14px; font-size:13px; color:rgba(245,223,160,0.55); font-style:italic;">Together, we welcome you to join in our joy!</p>
+</div>
+
+<!-- ══ MAIN EVENT ══ -->
+<div id="main-event">
+<section class="main-event-section fade-in">
+  <div class="section-label">♦ The Main Event ♦</div>
+  <h2 class="section-title">Wedding Day</h2>
+  <div class="section-rule">
+    <span></span>
+    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 0 L9.5 6 L16 8 L9.5 10 L8 16 L6.5 10 L0 8 L6.5 6Z" fill="#C9963A"/></svg>
+    <span></span>
+  </div>
+
+  <div class="event-card-main">
+    <div class="event-date-badge">Tuesday, 5th May 2026</div>
+    <div class="event-name">Wedding Reception &amp;<br>Blessing Ceremony</div>
+    <ul class="event-details">
+      <li>
+        <span class="icon">🕖</span>
+        <span><strong>Time:</strong> 07:00 PM onwards</span>
+      </li>
+      <li>
+        <span class="icon">📍</span>
+        <span><strong>Venue:</strong> Anand Marriage Garden, RAPTC, Palhar Nagar, Indore</span>
+      </li>
+      <li>
+        <span class="icon">👗</span>
+        <span>Dress beautifully — this is a celebration of love and joy!</span>
+      </li>
+    </ul>
+  </div>
+</section>
+</div>
+
+<!-- ══ ITINERARY ══ -->
+<div id="itinerary">
+<section class="itinerary-section fade-in">
+  <div class="section-label">♦ A Week of Celebrations ♦</div>
+  <h2 class="section-title">Wedding Itinerary</h2>
+  <div class="section-rule">
+    <span></span>
+    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 0 L9.5 6 L16 8 L9.5 10 L8 16 L6.5 10 L0 8 L6.5 6Z" fill="#C9963A"/></svg>
+    <span></span>
+  </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item fade-in">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">May 02, 2026</div>
+      <div class="timeline-event-name">🌸 Mata Pujan &amp; Mehendi</div>
+      <div class="timeline-desc">Kickstarting the celebrations with tradition and henna. An evening of colour, laughter, and beautiful patterns.</div>
+    </div>
+
+    <div class="timeline-item fade-in">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">May 03, 2026</div>
+      <div class="timeline-event-name">☀️ Haldi Ceremony</div>
+      <div class="timeline-desc">A day of sunshine, laughter, and turmeric. Blessings the traditional way — vibrant, joyful, and golden.</div>
+    </div>
+
+    <div class="timeline-item fade-in">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">May 04, 2026</div>
+      <div class="timeline-event-name">🎵 Mandap &amp; Music Night</div>
+      <div class="timeline-desc">The sacred Mandap ceremony followed by an evening of music and dance. Celebrate love the Indian way!</div>
+    </div>
+
+    <div class="timeline-item fade-in">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">May 05, 2026 — The Big Day</div>
+      <div class="timeline-event-name">💍 The Wedding</div>
+      <div class="timeline-desc">The most awaited day — filled with rituals, processions, vows, and joy.</div>
+      <div class="timeline-sub">
+        <div class="timeline-sub-item">
+          <span class="sub-time">11:00 AM</span>
+          <span class="sub-text"><strong>Teekafaldan</strong> — APTC Police Garden<br><span style="font-style:italic; color:#9A6060; font-size:14px;">A sacred ritual joining two families</span></span>
+        </div>
+        <div class="timeline-sub-item">
+          <span class="sub-time">Afternoon</span>
+          <span class="sub-text"><strong>The Baraat</strong><br><span style="font-style:italic; color:#9A6060; font-size:14px;">The grand procession leads the way to the venue</span></span>
+        </div>
+        <div class="timeline-sub-item">
+          <span class="sub-time">07:00 PM</span>
+          <span class="sub-text"><strong>Wedding Reception</strong> — Anand Marriage Garden<br><span style="font-style:italic; color:#9A6060; font-size:14px;">Reception, blessings & celebrations</span></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<!-- ══ VENUE ══ -->
+<div id="venue">
+<section class="venue-section fade-in">
+  <div class="section-label">♦ Find Us Here ♦</div>
+  <h2 class="section-title">The Venue</h2>
+  <div class="section-rule">
+    <span></span>
+    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 0 L9.5 6 L16 8 L9.5 10 L8 16 L6.5 10 L0 8 L6.5 6Z" fill="#C9963A"/></svg>
+    <span></span>
+  </div>
+
+  <div class="venue-card">
+    <div class="venue-map-placeholder">
+      <span class="map-pin-icon">📍</span>
+    </div>
+    <div class="venue-info">
+      <div class="venue-name">Anand Marriage Garden</div>
+      <div class="venue-address">
+        RAPTC, Palhar Nagar<br>
+        Indore, Madhya Pradesh<br>
+        India
+      </div>
+      <a class="maps-btn" href="https://maps.google.com/?q=Anand+Marriage+Garden,+RAPTC,+Palhar+Nagar,+Indore,+Madhya+Pradesh" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Open in Google Maps
+      </a>
+    </div>
+  </div>
+  </div>
+</section>
+</div>
+
+<!-- ══ FAMILIES ══ -->
+<div class="families-section fade-in" style="padding: 60px 24px; max-width: 480px; margin: 0 auto; text-align: center;">
+  <div class="section-label">♦ With Blessings Of ♦</div>
+  <h2 class="section-title">The Families</h2>
+  <div class="section-rule">
+    <span></span>
+    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 0 L9.5 6 L16 8 L9.5 10 L8 16 L6.5 10 L0 8 L6.5 6Z" fill="#C9963A"/></svg>
+    <span></span>
+  </div>
+  <p class="families-quote">With the blessings of our elders and the love of our kin, two families come together as one.</p>
+  <div class="families-names">
+    <div class="family-name">The Rathor Family</div>
+    <div class="families-amp">&amp;</div>
+    <div class="family-name">The Sahu Family</div>
+  </div>
+  <p class="families-tagline">Together, we welcome you to join in our joy!</p>
+</div>
+
+<!-- ══ TRAVEL ══ -->
+<div id="travel">
+<section class="travel-section fade-in" style="max-width: 100%; padding: 70px 24px;">
+  <div style="max-width: 480px; margin: 0 auto;">
+    <div class="section-label">♦ Getting Here ♦</div>
+    <h2 class="section-title" style="color: var(--gold-pale);">Location &amp; Travel</h2>
+    <div class="section-rule">
+      <span style="background: linear-gradient(90deg, transparent, rgba(201,150,58,0.5))"></span>
+      <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 0 L9.5 6 L16 8 L9.5 10 L8 16 L6.5 10 L0 8 L6.5 6Z" fill="#C9963A"/></svg>
+      <span style="background: linear-gradient(90deg, rgba(201,150,58,0.5), transparent)"></span>
+    </div>
+    <div class="travel-grid">
+      <div class="travel-card">
+        <div class="travel-card-icon">✈️</div>
+        <div class="travel-card-title">Nearest Airport</div>
+        <div class="travel-card-text">Devi Ahilya Bai Holkar Airport (IDR), Indore<br><span style="font-size:14px; opacity:0.7;">~15–20 mins drive to the venue</span></div>
+      </div>
+      <div class="travel-card">
+        <div class="travel-card-icon">🚆</div>
+        <div class="travel-card-title">By Train</div>
+        <div class="travel-card-text">Indore Junction (INDB) — well connected from Mumbai, Delhi, Bhopal, Pune & more.</div>
+      </div>
+      <div class="travel-card">
+        <div class="travel-card-icon">🚗</div>
+        <div class="travel-card-title">By Road</div>
+        <div class="travel-card-text">Indore is connected via NH-52 & NH-347. Taxis & autos easily available from the city centre.</div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <!-- Decorative top border -->
+  <div style="height:1px; background: linear-gradient(90deg, transparent, #C9963A, transparent); margin-bottom:32px;"></div>
+  <svg viewBox="0 0 240 40" width="200" style="display:block; margin: 0 auto 24px; opacity:0.3;" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 20 Q60 0 120 20 Q180 40 240 20" stroke="#C9963A" stroke-width="0.8"/>
+    <path d="M0 20 Q60 40 120 20 Q180 0 240 20" stroke="#C9963A" stroke-width="0.8"/>
+    <circle cx="120" cy="20" r="4" fill="#C9963A"/>
+    <circle cx="60" cy="10" r="2" fill="#C9963A" opacity="0.5"/>
+    <circle cx="180" cy="30" r="2" fill="#C9963A" opacity="0.5"/>
+  </svg>
+  <div class="footer-names">Rahul &amp; Harsha</div>
+  <div class="footer-date">5th May 2026 · Indore</div>
+  <div class="footer-msg">
+    "Celebrate our love — for today<br>and all the days that follow."<br><br>
+    <span style="font-size:11px; letter-spacing:2px; font-style:normal; font-family:'Cinzel', serif; color:rgba(201,150,58,0.3);">THE RATHOR &amp; SAHU FAMILIES</span>
+  </div>
+  <div style="height:1px; background: linear-gradient(90deg, transparent, rgba(201,150,58,0.3), transparent); margin-top:32px;"></div>
+</footer>
+
+<script>
+  // Scroll fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
