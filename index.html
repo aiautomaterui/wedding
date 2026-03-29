@@ -374,27 +374,34 @@
     line-height: 1.6;
   }
   .timeline-sub { margin-top: 10px; }
-  .timeline-sub-item {
-    display: flex; align-items: flex-start; gap: 8px;
-    margin-bottom: 8px;
-    padding: 10px 14px;
-    background: rgba(255,255,255,0.7);
-    border-left: 2px solid var(--gold);
-    border-radius: 0 4px 4px 0;
-  }
-  .timeline-sub-item .sub-time {
-    font-family: 'Cinzel', serif;
-    font-size: 9px; letter-spacing: 1px;
-    color: var(--gold);
-    white-space: nowrap;
-    margin-top: 1px;
-  }
-  .timeline-sub-item .sub-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 15px;
-    color: var(--text);
-    line-height: 1.4;
-  }
+.timeline-sub-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.7);
+  border-left: 2px solid var(--gold);
+  border-radius: 0 4px 4px 0;
+}
+
+/* 🔥 FIX ALIGNMENT HERE */
+.timeline-sub-item .sub-time {
+  width: 110px;          /* KEY FIX */
+  flex-shrink: 0;
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.timeline-sub-item .sub-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.4;
+}
 
   /* ─── VENUE ─── */
   .venue-section { background: var(--ivory); }
