@@ -57,11 +57,11 @@ export default function Hero() {
         transition={{ duration: 1.5, ease: "easeOut" }}
         style={{
           position: 'absolute',
-          top: -10vh, left: 0,
+          top: 0, left: 0,
           width: '100%', height: '50vh',
           backgroundImage: `url(${heroImg})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'top center',
+          backgroundPosition: 'center center',
           zIndex: -2,
           opacity: 0.95
         }}
