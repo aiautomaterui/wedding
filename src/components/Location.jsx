@@ -75,7 +75,7 @@ export default function Location() {
           textAlign: 'left'
         }}>
           <p style={{ color: 'var(--text-main)', margin: 0, lineHeight: 1.6 }}>
-            <strong style={{ color: 'var(--secondary)', fontSize: '0.9rem', lineHeight: 1.8, marginBottom: '2rem' }}>Note to Guests:</strong> The Baraat will depart from the Rathore residence and proceed directly to Anand Marriage Garden.
+            <strong style={{ color: 'var(--secondary)', fontSize: '0.9rem', lineHeight: 1.8, marginBottom: '2rem' }}>Note to Guests:</strong> The Baraat will depart from the Rathor Residence to Anand Marriage Garden.
           </p>
         </motion.div>
       </motion.div>
