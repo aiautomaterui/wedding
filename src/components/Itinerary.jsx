@@ -40,10 +40,6 @@ const EventSlide = ({ date, title, description, animationComp, subEvents }) => (
      <ScrollDownIndicator />
   </section>
 );
-
-export const Itinerary1 = () => <EventSlide date="May 02, 2026" title="Mata Pujan & Mehendi" description="Kickstarting the celebrations with tradition and henna." animationComp={<AnimatedLotus size={50} />} />;
-export const Itinerary2 = () => <EventSlide date="May 03, 2026" title="Haldi Ceremony" description="A day of sunshine, laughter, and turmeric." animationComp={<AnimatedHaldi scale={0.8} />} />;
-export const Itinerary3 = () => <EventSlide date="May 04, 2026" title="Mandap & Music" description="The sacred Mandap ceremony followed by an evening of music and dance." animationComp={<AnimatedDiya size={50} color="var(--primary)" />} />;
 export const Itinerary4 = () => <EventSlide date="May 05, 2026" title="The Big Day" description="The main event culminates with the Teekafaldan, Baraat, and Wedding Reception." animationComp={<AnimatedBaraat scale={0.8} />} subEvents={[
     { time: '11:00 AM', name: 'Teekafaldan', location: 'RAPTC Police Garden' },
     { time: 'Afternoon', name: 'The Baraat', location: 'Grand procession to venue' },
