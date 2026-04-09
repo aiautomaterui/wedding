@@ -42,6 +42,6 @@ const EventSlide = ({ date, title, description, animationComp, subEvents }) => (
 );
 export const Itinerary4 = () => <EventSlide date="May 05, 2026" title="Celebrating Together" description="A joyful celebration with family, love, and togetherness." animationComp={<AnimatedBaraat scale={0.8} />} subEvents={[
     { time: '', name: 'Teekafaldan', location: 'Blessings, traditions, and families coming together.' },
-    { time: 'Evening', name: 'The Baraat', location: 'A joyful procession of music, dance, and celebration.' },
-    { time: '07:00 PM', name: 'Wedding Reception', location: 'An evening of love, joy, and togetherness.' }
+    { time: '', name: 'The Baraat', location: 'A joyful procession of music, dance, and celebration.' },
+    { time: '', name: 'Wedding Reception', location: 'An evening of love, joy, and togetherness.' }
 ]} />;
