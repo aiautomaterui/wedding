@@ -86,7 +86,7 @@ export default function Hero() {
            style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.2rem' }}
         >
           <div style={{ filter: 'brightness(3)' }}>
-              <Ganesha showText={false} />
+              <Ganesha showSymbol={false} />
           </div>
         </motion.div>
 
@@ -106,9 +106,9 @@ export default function Hero() {
             color: 'var(--primary)',
             textShadow: '0 4px 15px rgba(0,0,0,0.6)'
           }}>
-            Harsha
-            <span style={{ fontSize: '0.5em', verticalAlign: 'middle', margin: '0 0.8rem', color: 'var(--secondary)' }}>&</span>
             Rahul
+            <span style={{ fontSize: '0.4em', verticalAlign: 'middle', margin: '0 0.8rem', color: 'var(--secondary)' }}>&</span>
+            Harsha
           </h1>
 
           <div style={{ width: '50px', height: '2px', backgroundColor: 'var(--secondary)', margin: '1.5rem auto' }} />
