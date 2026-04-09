@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Hero from './components/Hero';
 import { InvitationIntro, InvitationDetails } from './components/Invitation';
-import { Itinerary1, Itinerary2, Itinerary3, Itinerary4 } from './components/Itinerary';
+import { Itinerary4 } from './components/Itinerary';
 import Families from './components/Families';
 import Location from './components/Location';
 import FixedFrame from './components/FixedFrame';
 
-const slides = [Hero, InvitationIntro, InvitationDetails, Itinerary1, Itinerary2, Itinerary3, Itinerary4, Families, Location];
+const slides = [Hero, InvitationIntro, InvitationDetails, Itinerary4, Families, Location];
 
 function App() {
   const [currentPage, setCurrentPage] = useState(0);
