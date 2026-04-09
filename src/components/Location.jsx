@@ -33,7 +33,7 @@ export default function Location() {
         viewport={{ once: true }}
         className="max-w-4xl"
       >
-        <motion.h2 variants={itemVariants} style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>Location</motion.h2>
+        <motion.h2 variants={itemVariants} style={{ fontSize: '2rem', marginBottom: '0.5rem' }}></motion.h2>
         <motion.div variants={itemVariants} style={{ width: '40px', height: '2px', backgroundColor: 'var(--secondary)', margin: '0 auto 1rem' }}></motion.div>
 
         <motion.div variants={itemVariants} className="glass-panel" style={{ 
