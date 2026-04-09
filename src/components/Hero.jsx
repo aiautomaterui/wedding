@@ -116,8 +116,8 @@ export default function Hero() {
           <p style={{ fontSize: '1.2rem', fontWeight: 600, letterSpacing: '4px', textTransform: 'uppercase', color: 'var(--primary)' }}>
             May 05, 2026
           </p>
-          <p style={{ fontSize: '1rem', fontWeight: 400, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--text-light)', marginTop: '0.5rem' }}>
-            Indore, India
+          <p style={{ fontSize: '0.4rem', fontWeight: 400, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--text-light)', marginTop: '0.5rem' }}>
+            Anand Marriage Garden,Indore,
           </p>
         </motion.div>
       </div>
