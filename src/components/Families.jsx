@@ -49,10 +49,11 @@ export default function Families() {
           <AnimatedLotus size={50} color="var(--primary)" />
         </motion.div>
         
-        <motion.h2 variants={itemVariants} style={{ fontSize: '2.5rem', marginBottom: '1rem', color: 'var(--primary)' }}>Join Us</motion.h2>
+        <motion.h2 variants={itemVariants} style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--primary)' }}>Cordially Invite You</motion.h2>
         
-        <motion.p variants={itemVariants} style={{ fontSize: '1.2rem', marginBottom: '2rem', fontStyle: 'italic', color: 'var(--text-light)' }}>
-          With the blessings of our elders and the love of our kin:
+        <motion.p variants={itemVariants} style={{ fontSize: '0.8rem', marginBottom: '2rem', fontStyle: 'italic', color: 'var(--text-light)' }}>
+          With the blessings of our elders and the joy in our hearts,
+we invite you to be a part of this beautiful celebration of love and togetherness.
         </motion.p>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', marginBottom: '2rem' }}>
