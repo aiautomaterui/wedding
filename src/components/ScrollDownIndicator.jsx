@@ -16,7 +16,8 @@ export default function ScrollDownIndicator() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        gap: '8px'
+        gap: '8px',
+        width: 'fit-content'
       }}
     >
       {/* Scroll text */}
