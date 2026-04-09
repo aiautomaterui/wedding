@@ -58,10 +58,10 @@ export default function Hero() {
         style={{
           position: 'absolute',
           top: 0, left: 0,
-          width: '100%', height: '50vh',
+          width: '100%', height: '30vh',
           backgroundImage: `url(${heroImg})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center center',
+          backgroundPosition: 'top center',
           zIndex: -2,
           opacity: 0.95
         }}
