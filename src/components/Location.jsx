@@ -54,14 +54,14 @@ export default function Location() {
           </div>
 
           <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: 'var(--text-main)' }}>Venue</h3>
-          <p style={{ color: 'var(--text-light)', fontSize: '1.2rem', lineHeight: 1.8, marginBottom: '2rem' }}>
+          <p style={{ color: 'var(--text-light)', fontSize: '0.8rem', lineHeight: 1.8, marginBottom: '2rem' }}>
             <strong>Anand Marriage Garden</strong><br />
             RAPTC, Palhar Nagar,<br />
             Indore, Madhya Pradesh
           </p>
 
           <a href={mapLink} target="_blank" rel="noopener noreferrer" className="btn">
-            <Navigation size={20} />
+            <Navigation size={15} />
             Open in Google Maps
           </a>
         </motion.div>

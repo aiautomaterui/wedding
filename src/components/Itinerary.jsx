@@ -41,7 +41,7 @@ const EventSlide = ({ date, title, description, animationComp, subEvents }) => (
   </section>
 );
 export const Itinerary4 = () => <EventSlide date="May 05, 2026" title="The Big Day" description="The main event culminates with the Teekafaldan, Baraat, and Wedding Reception." animationComp={<AnimatedBaraat scale={0.8} />} subEvents={[
-    { time: '11:00 AM', name: 'Teekafaldan', location: 'RAPTC Police Garden' },
-    { time: 'Afternoon', name: 'The Baraat', location: 'Grand procession to venue' },
+    { time: 'Morning', name: 'Teekafaldan', location: 'Anand Marriage Garden' },
+    { time: 'Evening', name: 'The Baraat', location: 'Grand procession to venue' },
     { time: '07:00 PM', name: 'Wedding Reception', location: 'Anand Marriage Garden' }
 ]} />;

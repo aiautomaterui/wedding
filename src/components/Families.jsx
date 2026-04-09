@@ -49,7 +49,7 @@ export default function Families() {
           <AnimatedLotus size={50} color="var(--primary)" />
         </motion.div>
         
-        <motion.h2 variants={itemVariants} style={{ fontSize: '2.5rem', marginBottom: '1rem', color: 'var(--primary)' }}>Our Families</motion.h2>
+        <motion.h2 variants={itemVariants} style={{ fontSize: '2.5rem', marginBottom: '1rem', color: 'var(--primary)' }}>Join Us</motion.h2>
         
         <motion.p variants={itemVariants} style={{ fontSize: '1.2rem', marginBottom: '2rem', fontStyle: 'italic', color: 'var(--text-light)' }}>
           With the blessings of our elders and the love of our kin:
