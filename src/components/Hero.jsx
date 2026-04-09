@@ -57,11 +57,11 @@ export default function Hero() {
         transition={{ duration: 1.5, ease: "easeOut" }}
         style={{
           position: 'absolute',
-          top: 0, left: 0,
-          width: '100%', height: '30vh',
+          top: '50%', left: 0,
+          width: '100%', height: '50vh',
           backgroundImage: `url(${heroImg})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'top center',
+          backgroundPosition: 'center bottom',
           zIndex: -2,
           opacity: 0.95
         }}
@@ -71,9 +71,9 @@ export default function Hero() {
       <div 
         style={{
           position: 'absolute',
-          top: 0, left: 0,
+          top: '50%', left: 0,
           width: '100%', height: '51vh',
-          background: 'linear-gradient(to bottom, rgba(92,22,46,0) 0%, rgba(92,22,46,0.3) 50%, var(--bg-color) 100%)',
+          background: 'linear-gradient(to bottom, rgba(92,22,46,0.8) 0%, rgba(92,22,46,0.5) 50%, var(--bg-color) 100%)',
           zIndex: -1
         }}
       />
