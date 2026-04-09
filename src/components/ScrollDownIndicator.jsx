@@ -7,7 +7,7 @@ export default function ScrollDownIndicator() {
       animate={{ y: [0, 12, 0] }} 
       transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
       style={{
-        position: 'absolute',
+        position: 'fixed',
         bottom: '30px',
         left: '50%',
         transform: 'translateX(-50%)',
