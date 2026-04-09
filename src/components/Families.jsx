@@ -56,9 +56,9 @@ export default function Families() {
         </motion.p>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', marginBottom: '2rem' }}>
-          <motion.h3 variants={itemVariants} style={{ fontSize: '2.2rem', margin: 0, fontFamily: 'var(--font-heading)', color: 'var(--primary-dark)' }}>The Rathore Family</motion.h3>
-          <motion.span variants={itemVariants} style={{ fontSize: '1.5rem', opacity: 0.8, color: 'var(--primary)' }}>&</motion.span>
-          <motion.h3 variants={itemVariants} style={{ fontSize: '2.2rem', margin: 0, fontFamily: 'var(--font-heading)', color: 'var(--primary-dark)' }}>The Sahu Family</motion.h3>
+          <motion.h3 variants={itemVariants} style={{ fontSize: '1.2rem', margin: 0, fontFamily: 'var(--font-heading)', color: 'var(--primary-dark)' }}>The Rathor Family</motion.h3>
+          <motion.span variants={itemVariants} style={{ fontSize: '0.8rem', opacity: 0.8, color: 'var(--primary)' }}>&</motion.span>
+          <motion.h3 variants={itemVariants} style={{ fontSize: '1.2rem', margin: 0, fontFamily: 'var(--font-heading)', color: 'var(--primary-dark)' }}>The Sahu Family</motion.h3>
         </div>
 
         <motion.p variants={itemVariants} style={{ fontSize: '1.1rem', letterSpacing: '1px', textTransform: 'uppercase', color: 'var(--secondary)' }}>
