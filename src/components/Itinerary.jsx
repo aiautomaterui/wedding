@@ -40,7 +40,7 @@ const EventSlide = ({ date, title, description, animationComp, subEvents }) => (
      <ScrollDownIndicator />
   </section>
 );
-export const Itinerary4 = () => <EventSlide date="May 05, 2026" title="The Big Day" description="The main event culminates with the Teekafaldan, Baraat, and Wedding Reception." animationComp={<AnimatedBaraat scale={0.8} />} subEvents={[
+export const Itinerary4 = () => <EventSlide date="May 05, 2026" title="Celebrating Together" description="A joyful celebration with family, love, and togetherness." animationComp={<AnimatedBaraat scale={0.8} />} subEvents={[
     { time: 'Morning', name: 'Teekafaldan', location: 'Anand Marriage Garden' },
     { time: 'Evening', name: 'The Baraat', location: 'Grand procession to venue' },
     { time: '07:00 PM', name: 'Wedding Reception', location: 'Anand Marriage Garden' }
