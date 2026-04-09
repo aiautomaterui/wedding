@@ -2,6 +2,7 @@ import React from 'react';
 import { Calendar } from 'lucide-react';
 import { AnimatedLotus, AnimatedDiya, RotatingMandala } from './Graphics';
 import { AnimatedHaldi, AnimatedBaraat } from './AnimatedCharacters';
+import ScrollDownIndicator from './ScrollDownIndicator';
 
 // Shared event rendering wrapper to natively fit within single viewport layout
 const EventSlide = ({ date, title, description, animationComp, subEvents }) => (
@@ -36,6 +37,7 @@ const EventSlide = ({ date, title, description, animationComp, subEvents }) => (
          </div>
        )}
      </div>
+     <ScrollDownIndicator />
   </section>
 );
 

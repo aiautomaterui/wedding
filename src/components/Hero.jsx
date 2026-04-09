@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import Ganesha from './Ganesha';
+import ScrollDownIndicator from './ScrollDownIndicator';
 
 const heroImg = "https://decoral.in/wp-content/uploads/2026/03/website-img.png";
 
@@ -57,7 +58,7 @@ export default function Hero() {
         style={{
           position: 'absolute',
           top: 0, left: 0,
-          width: '100%', height: '65vh',
+          width: '100%', height: '50vh',
           backgroundImage: `url(${heroImg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'top center',
@@ -71,7 +72,7 @@ export default function Hero() {
         style={{
           position: 'absolute',
           top: 0, left: 0,
-          width: '100%', height: '66vh',
+          width: '100%', height: '51vh',
           background: 'linear-gradient(to bottom, rgba(92,22,46,0) 0%, rgba(92,22,46,0.3) 50%, var(--bg-color) 100%)',
           zIndex: -1
         }}
@@ -120,6 +121,7 @@ export default function Hero() {
           </p>
         </motion.div>
       </div>
+      <ScrollDownIndicator />
     </section>
   );
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Ganesha from './Ganesha';
 import { AnimatedLotus, RotatingMandala } from './Graphics';
+import ScrollDownIndicator from './ScrollDownIndicator';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -64,6 +65,7 @@ export default function Families() {
           We welcome you to join in our joy!
         </motion.p>
       </motion.div>
+      <ScrollDownIndicator />
     </section>
   );
 }

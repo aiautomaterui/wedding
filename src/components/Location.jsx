@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Navigation } from 'lucide-react';
+import ScrollDownIndicator from './ScrollDownIndicator';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -78,6 +79,7 @@ export default function Location() {
           </p>
         </motion.div>
       </motion.div>
+      <ScrollDownIndicator />
     </section>
   );
 }

@@ -89,16 +89,7 @@ function App() {
         </motion.div>
       </AnimatePresence>
       
-      {/* Swipe Indication */}
-      {currentPage < slides.length - 1 && (
-         <motion.div 
-           animate={{ y: [0, 10, 0] }} 
-           transition={{ repeat: Infinity, duration: 2 }}
-           style={{ position: 'absolute', bottom: '30px', left: '50%', transform: 'translateX(-50%)', zIndex: 100, color: 'var(--primary-dark)', fontSize: '14px', pointerEvents: 'none' }}
-         >
-            Swipe / Scroll 
-         </motion.div>
-      )}
+
     </div>
   );
 }
