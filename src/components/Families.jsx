@@ -61,7 +61,7 @@ export default function Families() {
           <motion.h3 variants={itemVariants} style={{ fontSize: '1.2rem', margin: 0, fontFamily: 'var(--font-heading)', color: 'var(--primary-dark)' }}>The Sahu Family</motion.h3>
         </div>
 
-        <motion.p variants={itemVariants} style={{ fontSize: '1.1rem', letterSpacing: '1px', textTransform: 'uppercase', color: 'var(--secondary)' }}>
+        <motion.p variants={itemVariants} style={{ fontSize: '0.8rem', letterSpacing: '1px', textTransform: 'uppercase', color: 'var(--secondary)' }}>
           We welcome you to join in our joy!
         </motion.p>
       </motion.div>
