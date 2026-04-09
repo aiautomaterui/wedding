@@ -86,7 +86,7 @@ export default function Hero() {
            style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.2rem' }}
         >
           <div style={{ filter: 'brightness(3)' }}>
-              <Ganesha />
+              <Ganesha showText={false} />
           </div>
         </motion.div>
 
