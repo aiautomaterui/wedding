@@ -54,7 +54,7 @@ export default function Location() {
           </div>
 
           <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: 'var(--text-main)' }}>Venue</h3>
-          <p style={{ color: 'var(--text-light)', fontSize: '0.8rem', lineHeight: 1.8, marginBottom: '2rem' }}>
+          <p style={{ color: 'var(--text-light)', fontSize: '0.9rem', lineHeight: 1.8, marginBottom: '2rem' }}>
             <strong>Anand Marriage Garden</strong><br />
             RAPTC, Palhar Nagar,<br />
             Indore, Madhya Pradesh
@@ -75,7 +75,7 @@ export default function Location() {
           textAlign: 'left'
         }}>
           <p style={{ color: 'var(--text-main)', margin: 0, lineHeight: 1.6 }}>
-            <strong style={{ color: 'var(--secondary)' }}>Note to Guests:</strong> The Baraat will depart from the Rathore residence and proceed directly to Anand Marriage Garden. Please ensure you arrive in time to join the celebration!
+            <strong style={{ color: 'var(--secondary)' fontSize: '0.9rem', lineHeight: 1.8, marginBottom: '2rem' }}>Note to Guests:</strong> The Baraat will depart from the Rathore residence and proceed directly to Anand Marriage Garden. Please ensure you arrive in time to join the celebration!
           </p>
         </motion.div>
       </motion.div>
