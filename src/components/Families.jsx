@@ -58,8 +58,6 @@ we invite you to be a part of this beautiful celebration of love and togethernes
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', marginBottom: '2rem' }}>
           <motion.h3 variants={itemVariants} style={{ fontSize: '1.2rem', margin: 0, fontFamily: 'var(--font-heading)', color: 'var(--primary-dark)' }}>The Rathor Family</motion.h3>
-          <motion.span variants={itemVariants} style={{ fontSize: '0.8rem', opacity: 0.8, color: 'var(--primary)' }}>&</motion.span>
-          <motion.h3 variants={itemVariants} style={{ fontSize: '1.2rem', margin: 0, fontFamily: 'var(--font-heading)', color: 'var(--primary-dark)' }}>The Sahu Family</motion.h3>
         </div>
       </motion.div>
       <ScrollDownIndicator />
